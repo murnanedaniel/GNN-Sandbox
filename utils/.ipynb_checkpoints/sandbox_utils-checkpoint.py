@@ -28,7 +28,7 @@ from torch_scatter import *
 
 # Locals
 from torch_geometric.data import Batch
-from toy_utils import *
+from utils.toy_utils import *
 
 # Interactive
 import ipywidgets as widgets
