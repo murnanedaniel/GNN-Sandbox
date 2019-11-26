@@ -1,23 +1,8 @@
-# Graph Neural Networks for particle track reconstruction
+# Sandbox for GNN Architectures
 
-This repository contains the PyTorch implementation of the GNNs for particle
-track reconstruction from CTD 2018: https://arxiv.org/abs/1810.06111.
+This repository contains a collection of notebooks and automation scripts for designing GNN architectures (for particle track detection, ostensibly - though any datasets could be used) manually or via grid-scanning methods.
 
 ## Contents
 
-The main python scripts for running:
-- *[prepare.py](prepare.py)*: the data preparation script which reads
-TrackML data files, cleans and reduces the data, and writes hit graphs to
-the filesystem.
-- *[train.py](train.py)*: the main training script which is steered by
-configuration file and loads the data, model, and trainer, and invokes
-the trainer to train the model.
-
-Other stuff:
-- In the scripts directory are SLURM batch scripts for running the jobs
-on Cori at NERSC.
-- The GNN model code lives in [models/gnn.py](models/gnn.py).
-- The dataset code for reading the prepared hit graphs lives in
-[datasets/hitgraphs.py](datasets/hitgraphs.py).
-- The main trainer code for the GNN segment classifier lives in
-[trainers/gnn.py](trainers/gnn.py).
+- *[Sandbox.ipnb](Sandbox.ipynb)*: This is the main gateway to the design code. Contains interactive methods for generating and loading data, and designing architectures around this.
+- *[/notebooks](/notebooks)*: Directory containing some concrete architectures. They are mostly for development of the repo itself.
