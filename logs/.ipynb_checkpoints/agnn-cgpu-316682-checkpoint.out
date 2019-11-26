@@ -1,0 +1,91 @@
+2019-11-08 11:16:41,032 INFO Initialized rank 0 out of 1
+2019-11-08 11:16:41,033 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 160, 'n_valid': 40, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'cross_entropy'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.1, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 20, 'factor': 0.5}, {'start_epoch': 20, 'end_epoch': 40, 'factor': 0.1}, {'start_epoch': 40, 'end_epoch': 50, 'factor': 0.05}, {'start_epoch': 50, 'end_epoch': 64, 'factor': 0.01}]}, 'training': {'n_epochs': 64}, 'n_ranks': 1}
+2019-11-08 11:16:41,033 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-08 11:16:41,033 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+2019-11-08 11:16:41,936 INFO Loaded 160 training samples
+2019-11-08 11:16:41,937 INFO Loaded 40 validation samples
+2019-11-08 11:16:41,937 INFO Choosing GPU 0
+2019-11-08 11:16:44,685 INFO Model: 
+GNNTrackCounter(
+  (input_network): Sequential(
+    (0): Linear(in_features=3, out_features=64, bias=True)
+    (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (2): Tanh()
+  )
+  (edge_network): EdgeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=134, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (node_network): NodeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=201, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=64, bias=True)
+      (10): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (11): Tanh()
+    )
+  )
+  (output_network): OutputNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=67, out_features=64, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): Tanh()
+      (4): Linear(in_features=64, out_features=64, bias=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=41, bias=True)
+    )
+  )
+)
+Parameters: 59050
+2019-11-08 11:16:44,685 INFO Epoch 0
+Features:  tensor([[ 1.9338e-01, -6.6994e-01,  7.5631e-01,  ...,  1.1601e-01,
+          3.2768e-01, -2.6185e-02],
+        [-1.4227e-01,  5.2502e-01,  6.3010e-01,  ...,  1.7275e-01,
+          3.0866e-01, -3.5047e-02],
+        [ 5.2679e-01, -5.1595e-01,  7.0376e-01,  ...,  2.6090e-01,
+          2.7959e-01, -4.8600e-02],
+        ...,
+        [-4.9264e-01,  7.5370e-01,  9.4098e-01,  ...,  7.2619e-02,
+         -6.6616e-01, -6.3024e-03],
+        [-4.6756e-01,  2.2880e-01,  9.4744e-01,  ...,  1.0231e+00,
+         -9.6109e-01, -2.7000e-02],
+        [-3.9268e-01,  3.2966e-02,  9.3427e-01,  ...,  3.1742e-02,
+         -2.4758e-01, -7.1060e-04]], device='cuda:0', grad_fn=<CatBackward>)
+Traceback (most recent call last):
+  File "train.py", line 184, in <module>
+    main()
+  File "train.py", line 160, in main
+    **config['training'])
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/trainers/gnn_base.py", line 196, in train
+    summary = self.train_epoch(train_data_loader)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/trainers/gnn_sparse.py", line 28, in train_epoch
+    batch_output = self.model(batch)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/counter.py", line 129, in forward
+    o = self.output_network(x)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/counter.py", line 81, in forward
+    print("Means: ", sum_input)
+NameError: name 'sum_input' is not defined
+srun: error: cgpu02: task 0: Exited with exit code 1
+srun: Terminating job step 316682.0

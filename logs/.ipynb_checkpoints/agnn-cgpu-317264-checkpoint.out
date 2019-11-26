@@ -1,0 +1,18 @@
+2019-11-08 15:42:49,299 INFO Initialized rank 0 out of 1
+2019-11-08 15:42:49,299 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 4000, 'n_valid': 100, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'cross_entropy'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.01, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 5, 'end_epoch': 10, 'factor': 0.5}, {'start_epoch': 10, 'end_epoch': 40, 'factor': 0.1}, {'start_epoch': 40, 'end_epoch': 70, 'factor': 0.05}, {'start_epoch': 70, 'end_epoch': 90, 'factor': 0.01}]}, 'training': {'n_epochs': 90}, 'n_ranks': 1}
+2019-11-08 15:42:49,299 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-08 15:42:49,300 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+Traceback (most recent call last):
+  File "train.py", line 184, in <module>
+    main()
+  File "train.py", line 132, in main
+    distributed=is_distributed, rank=rank, n_ranks=n_ranks, **config['data'])
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/datasets/__init__.py", line 24, in get_data_loaders
+    train_dataset, valid_dataset = hitgraphs_sparse.get_datasets(**data_args)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/datasets/hitgraphs_sparse.py", line 56, in get_datasets
+    train_data, valid_data = random_split(data, [n_train, n_valid])
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/utils/data/dataset.py", line 271, in random_split
+    raise ValueError("Sum of input lengths does not equal the length of the input dataset!")
+ValueError: Sum of input lengths does not equal the length of the input dataset!
+srun: error: cgpu02: task 0: Exited with exit code 1
+srun: Terminating job step 317264.0

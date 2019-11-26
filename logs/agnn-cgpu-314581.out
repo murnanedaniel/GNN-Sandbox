@@ -1,0 +1,256 @@
+2019-11-06 16:39:47,763 INFO Initialized rank 0 out of 1
+2019-11-06 16:39:47,763 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/doublet_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 160, 'n_valid': 40, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'binary_cross_entropy_with_logits'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.1, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 20, 'factor': 0.5}, {'start_epoch': 20, 'end_epoch': 40, 'factor': 0.1}, {'start_epoch': 40, 'end_epoch': 50, 'factor': 0.05}, {'start_epoch': 50, 'end_epoch': 64, 'factor': 0.01}]}, 'training': {'n_epochs': 64}, 'n_ranks': 1}
+2019-11-06 16:39:47,765 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/doublet_results/counter001
+2019-11-06 16:39:47,766 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/doublet_results/counter001/config.pkl
+2019-11-06 16:39:55,767 INFO Loaded 160 training samples
+2019-11-06 16:39:55,768 INFO Loaded 40 validation samples
+2019-11-06 16:39:55,768 INFO Choosing GPU 0
+2019-11-06 16:39:59,363 INFO Model: 
+GNNTrackCounter(
+  (input_network): Sequential(
+    (0): Linear(in_features=3, out_features=64, bias=True)
+    (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (2): Tanh()
+  )
+  (edge_network): EdgeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=134, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (node_network): NodeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=201, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=64, bias=True)
+      (10): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (11): Tanh()
+    )
+  )
+  (output_network): OutputNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=67, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=41, bias=True)
+    )
+  )
+)
+Parameters: 59434
+2019-11-06 16:39:59,364 INFO Epoch 0
+2019-11-06 16:40:03,254 INFO   Training loss: 0.388
+2019-11-06 16:40:03,727 INFO   Validation loss: 0.338 acc: 0.837
+2019-11-06 16:40:03,751 INFO Epoch 1
+2019-11-06 16:40:07,008 INFO   Training loss: 0.318
+2019-11-06 16:40:07,442 INFO   Validation loss: 0.243 acc: 0.909
+2019-11-06 16:40:07,466 INFO Epoch 2
+2019-11-06 16:40:10,677 INFO   Training loss: 0.305
+2019-11-06 16:40:11,119 INFO   Validation loss: 0.338 acc: 0.841
+2019-11-06 16:40:11,136 INFO Epoch 3
+2019-11-06 16:40:14,382 INFO   Training loss: 0.290
+2019-11-06 16:40:14,814 INFO   Validation loss: 0.240 acc: 0.933
+2019-11-06 16:40:14,828 INFO Epoch 4
+2019-11-06 16:40:18,096 INFO   Training loss: 0.256
+2019-11-06 16:40:18,532 INFO   Validation loss: 0.213 acc: 0.913
+2019-11-06 16:40:18,547 INFO Epoch 5
+2019-11-06 16:40:21,798 INFO   Training loss: 0.265
+2019-11-06 16:40:22,229 INFO   Validation loss: 0.255 acc: 0.911
+2019-11-06 16:40:22,244 INFO Epoch 6
+2019-11-06 16:40:25,492 INFO   Training loss: 0.309
+2019-11-06 16:40:25,918 INFO   Validation loss: 0.225 acc: 0.929
+2019-11-06 16:40:25,932 INFO Epoch 7
+2019-11-06 16:40:29,119 INFO   Training loss: 0.363
+2019-11-06 16:40:29,539 INFO   Validation loss: 0.444 acc: 0.888
+2019-11-06 16:40:29,554 INFO Epoch 8
+2019-11-06 16:40:32,725 INFO   Training loss: 0.365
+2019-11-06 16:40:33,145 INFO   Validation loss: 0.247 acc: 0.905
+2019-11-06 16:40:33,159 INFO Epoch 9
+2019-11-06 16:40:36,425 INFO   Training loss: 0.309
+2019-11-06 16:40:36,842 INFO   Validation loss: 0.268 acc: 0.888
+2019-11-06 16:40:36,858 INFO Epoch 10
+2019-11-06 16:40:40,078 INFO   Training loss: 0.238
+2019-11-06 16:40:40,514 INFO   Validation loss: 0.166 acc: 0.956
+2019-11-06 16:40:40,530 INFO Epoch 11
+2019-11-06 16:40:43,795 INFO   Training loss: 0.227
+2019-11-06 16:40:44,216 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:40:44,231 INFO Epoch 12
+2019-11-06 16:40:47,432 INFO   Training loss: 0.216
+2019-11-06 16:40:47,861 INFO   Validation loss: 0.165 acc: 0.954
+2019-11-06 16:40:47,876 INFO Epoch 13
+2019-11-06 16:40:51,216 INFO   Training loss: 0.214
+2019-11-06 16:40:51,635 INFO   Validation loss: 0.185 acc: 0.952
+2019-11-06 16:40:51,649 INFO Epoch 14
+2019-11-06 16:40:54,845 INFO   Training loss: 0.212
+2019-11-06 16:40:55,278 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:40:55,293 INFO Epoch 15
+2019-11-06 16:40:58,522 INFO   Training loss: 0.209
+2019-11-06 16:40:58,947 INFO   Validation loss: 0.182 acc: 0.952
+2019-11-06 16:40:58,962 INFO Epoch 16
+2019-11-06 16:41:02,162 INFO   Training loss: 0.214
+2019-11-06 16:41:02,583 INFO   Validation loss: 0.165 acc: 0.955
+2019-11-06 16:41:02,599 INFO Epoch 17
+2019-11-06 16:41:05,785 INFO   Training loss: 0.213
+2019-11-06 16:41:06,217 INFO   Validation loss: 0.191 acc: 0.933
+2019-11-06 16:41:06,231 INFO Epoch 18
+2019-11-06 16:41:09,499 INFO   Training loss: 0.216
+2019-11-06 16:41:09,943 INFO   Validation loss: 0.156 acc: 0.955
+2019-11-06 16:41:09,959 INFO Epoch 19
+2019-11-06 16:41:13,210 INFO   Training loss: 0.212
+2019-11-06 16:41:13,656 INFO   Validation loss: 0.180 acc: 0.955
+2019-11-06 16:41:13,671 INFO Epoch 20
+2019-11-06 16:41:16,863 INFO   Training loss: 0.191
+2019-11-06 16:41:17,296 INFO   Validation loss: 0.156 acc: 0.976
+2019-11-06 16:41:17,312 INFO Epoch 21
+2019-11-06 16:41:20,499 INFO   Training loss: 0.188
+2019-11-06 16:41:20,941 INFO   Validation loss: 0.155 acc: 0.976
+2019-11-06 16:41:20,956 INFO Epoch 22
+2019-11-06 16:41:24,139 INFO   Training loss: 0.188
+2019-11-06 16:41:24,569 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:41:24,584 INFO Epoch 23
+2019-11-06 16:41:27,804 INFO   Training loss: 0.188
+2019-11-06 16:41:28,332 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:41:28,347 INFO Epoch 24
+2019-11-06 16:41:31,617 INFO   Training loss: 0.187
+2019-11-06 16:41:32,040 INFO   Validation loss: 0.166 acc: 0.976
+2019-11-06 16:41:32,055 INFO Epoch 25
+2019-11-06 16:41:35,305 INFO   Training loss: 0.187
+2019-11-06 16:41:35,740 INFO   Validation loss: 0.160 acc: 0.976
+2019-11-06 16:41:35,755 INFO Epoch 26
+2019-11-06 16:41:38,990 INFO   Training loss: 0.187
+2019-11-06 16:41:39,453 INFO   Validation loss: 0.161 acc: 0.976
+2019-11-06 16:41:39,468 INFO Epoch 27
+2019-11-06 16:41:42,697 INFO   Training loss: 0.187
+2019-11-06 16:41:43,118 INFO   Validation loss: 0.162 acc: 0.976
+2019-11-06 16:41:43,134 INFO Epoch 28
+2019-11-06 16:41:46,366 INFO   Training loss: 0.186
+2019-11-06 16:41:46,794 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:41:46,809 INFO Epoch 29
+2019-11-06 16:41:50,105 INFO   Training loss: 0.186
+2019-11-06 16:41:50,541 INFO   Validation loss: 0.161 acc: 0.976
+2019-11-06 16:41:50,555 INFO Epoch 30
+2019-11-06 16:41:53,814 INFO   Training loss: 0.187
+2019-11-06 16:41:54,266 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:41:54,281 INFO Epoch 31
+2019-11-06 16:41:57,520 INFO   Training loss: 0.186
+2019-11-06 16:41:57,953 INFO   Validation loss: 0.162 acc: 0.976
+2019-11-06 16:41:57,967 INFO Epoch 32
+2019-11-06 16:42:01,245 INFO   Training loss: 0.187
+2019-11-06 16:42:01,686 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:42:01,701 INFO Epoch 33
+2019-11-06 16:42:05,120 INFO   Training loss: 0.187
+2019-11-06 16:42:05,588 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:42:05,603 INFO Epoch 34
+2019-11-06 16:42:09,090 INFO   Training loss: 0.186
+2019-11-06 16:42:09,549 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:42:09,564 INFO Epoch 35
+2019-11-06 16:42:12,999 INFO   Training loss: 0.186
+2019-11-06 16:42:13,471 INFO   Validation loss: 0.156 acc: 0.976
+2019-11-06 16:42:13,487 INFO Epoch 36
+2019-11-06 16:42:16,953 INFO   Training loss: 0.186
+2019-11-06 16:42:17,404 INFO   Validation loss: 0.156 acc: 0.976
+2019-11-06 16:42:17,419 INFO Epoch 37
+2019-11-06 16:42:20,864 INFO   Training loss: 0.185
+2019-11-06 16:42:21,319 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:42:21,335 INFO Epoch 38
+2019-11-06 16:42:24,806 INFO   Training loss: 0.185
+2019-11-06 16:42:25,262 INFO   Validation loss: 0.154 acc: 0.976
+2019-11-06 16:42:25,278 INFO Epoch 39
+2019-11-06 16:42:28,832 INFO   Training loss: 0.186
+2019-11-06 16:42:29,320 INFO   Validation loss: 0.161 acc: 0.976
+2019-11-06 16:42:29,377 INFO Epoch 40
+2019-11-06 16:42:32,786 INFO   Training loss: 0.183
+2019-11-06 16:42:33,210 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:42:33,225 INFO Epoch 41
+2019-11-06 16:42:36,414 INFO   Training loss: 0.184
+2019-11-06 16:42:36,836 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:42:36,851 INFO Epoch 42
+2019-11-06 16:42:40,052 INFO   Training loss: 0.184
+2019-11-06 16:42:40,483 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:42:40,497 INFO Epoch 43
+2019-11-06 16:42:43,730 INFO   Training loss: 0.183
+2019-11-06 16:42:44,154 INFO   Validation loss: 0.160 acc: 0.976
+2019-11-06 16:42:44,169 INFO Epoch 44
+2019-11-06 16:42:47,482 INFO   Training loss: 0.183
+2019-11-06 16:42:47,911 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:42:47,926 INFO Epoch 45
+2019-11-06 16:42:51,174 INFO   Training loss: 0.183
+2019-11-06 16:42:51,611 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:42:51,626 INFO Epoch 46
+2019-11-06 16:42:54,883 INFO   Training loss: 0.183
+2019-11-06 16:42:55,312 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:42:55,327 INFO Epoch 47
+2019-11-06 16:42:58,607 INFO   Training loss: 0.183
+2019-11-06 16:42:59,033 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:42:59,047 INFO Epoch 48
+2019-11-06 16:43:02,289 INFO   Training loss: 0.183
+2019-11-06 16:43:02,717 INFO   Validation loss: 0.157 acc: 0.976
+2019-11-06 16:43:02,731 INFO Epoch 49
+2019-11-06 16:43:06,088 INFO   Training loss: 0.183
+2019-11-06 16:43:06,520 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:06,535 INFO Epoch 50
+2019-11-06 16:43:09,858 INFO   Training loss: 0.181
+2019-11-06 16:43:10,296 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:10,310 INFO Epoch 51
+2019-11-06 16:43:13,591 INFO   Training loss: 0.181
+2019-11-06 16:43:14,018 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:14,034 INFO Epoch 52
+2019-11-06 16:43:17,271 INFO   Training loss: 0.181
+2019-11-06 16:43:17,699 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:17,714 INFO Epoch 53
+2019-11-06 16:43:21,124 INFO   Training loss: 0.181
+2019-11-06 16:43:21,562 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:21,576 INFO Epoch 54
+2019-11-06 16:43:24,979 INFO   Training loss: 0.181
+2019-11-06 16:43:25,441 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:25,456 INFO Epoch 55
+2019-11-06 16:43:28,888 INFO   Training loss: 0.181
+2019-11-06 16:43:29,361 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:29,376 INFO Epoch 56
+2019-11-06 16:43:32,820 INFO   Training loss: 0.181
+2019-11-06 16:43:33,301 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:33,316 INFO Epoch 57
+2019-11-06 16:43:36,808 INFO   Training loss: 0.181
+2019-11-06 16:43:37,262 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:37,277 INFO Epoch 58
+2019-11-06 16:43:40,744 INFO   Training loss: 0.181
+2019-11-06 16:43:41,202 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:41,217 INFO Epoch 59
+2019-11-06 16:43:44,685 INFO   Training loss: 0.181
+2019-11-06 16:43:45,148 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:43:45,163 INFO Epoch 60
+2019-11-06 16:43:48,563 INFO   Training loss: 0.181
+2019-11-06 16:43:48,996 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:43:49,011 INFO Epoch 61
+2019-11-06 16:43:52,230 INFO   Training loss: 0.181
+2019-11-06 16:43:52,671 INFO   Validation loss: 0.158 acc: 0.976
+2019-11-06 16:43:52,686 INFO Epoch 62
+2019-11-06 16:43:55,960 INFO   Training loss: 0.181
+2019-11-06 16:43:56,386 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:43:56,402 INFO Epoch 63
+2019-11-06 16:43:59,653 INFO   Training loss: 0.181
+2019-11-06 16:44:00,075 INFO   Validation loss: 0.159 acc: 0.976
+2019-11-06 16:44:00,091 INFO Finished training
+2019-11-06 16:44:00,097 INFO Train samples 160 time 3.30549 s rate 48.4043 samples/s
+2019-11-06 16:44:00,097 INFO Valid samples 40 time 0.440034 s rate 90.902 samples/s
+2019-11-06 16:44:00,097 INFO All done!

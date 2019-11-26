@@ -1,0 +1,7 @@
+2019-11-07 10:46:09,731 INFO Initialized rank 0 out of 1
+2019-11-07 10:46:09,731 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 160, 'n_valid': 40, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'binary_cross_entropy_with_logits'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.1, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 20, 'factor': 0.5}, {'start_epoch': 20, 'end_epoch': 40, 'factor': 0.1}, {'start_epoch': 40, 'end_epoch': 50, 'factor': 0.05}, {'start_epoch': 50, 'end_epoch': 64, 'factor': 0.01}]}, 'training': {'n_epochs': 64}, 'n_ranks': 1}
+2019-11-07 10:46:09,731 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-07 10:46:09,733 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+2019-11-07 10:46:18,637 INFO Loaded 160 training samples
+2019-11-07 10:46:18,637 INFO Loaded 40 validation samples
+2019-11-07 10:46:18,637 INFO Choosing GPU 0

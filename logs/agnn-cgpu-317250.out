@@ -1,0 +1,22 @@
+2019-11-08 14:50:17,655 INFO Initialized rank 0 out of 1
+2019-11-08 14:50:17,655 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 1000, 'n_valid': 100, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'cross_entropy'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.1, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 30, 'factor': 0.5}, {'start_epoch': 30, 'end_epoch': 50, 'factor': 0.1}, {'start_epoch': 50, 'end_epoch': 70, 'factor': 0.05}, {'start_epoch': 70, 'end_epoch': 90, 'factor': 0.01}]}, 'training': {'n_epochs': 90}, 'n_ranks': 1}
+2019-11-08 14:50:17,655 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-08 14:50:17,656 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+2019-11-08 14:50:18,868 INFO Loaded 1000 training samples
+2019-11-08 14:50:18,869 INFO Loaded 100 validation samples
+2019-11-08 14:50:18,869 INFO Choosing GPU 0
+Traceback (most recent call last):
+  File "train.py", line 184, in <module>
+    main()
+  File "train.py", line 149, in main
+    trainer.build_model(optimizer_config=optimizer_config, **model_config)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/trainers/gnn_base.py", line 91, in build_model
+    self.model = get_model(name=name, **model_args).to(self.device)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/__init__.py", line 16, in get_model
+    from .counter import GNNTrackCounter
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/counter.py", line 63
+    global_i = scatter_add((torch.ger(e,o), end, dim=0, dim_size=x.shape[0])
+                                                    ^
+SyntaxError: invalid syntax
+srun: error: cgpu02: task 0: Exited with exit code 1
+srun: Terminating job step 317250.0

@@ -1,0 +1,72 @@
+2019-11-08 15:05:47,082 INFO Initialized rank 0 out of 1
+2019-11-08 15:05:47,082 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 1000, 'n_valid': 100, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'cross_entropy'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.01, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 30, 'factor': 0.5}, {'start_epoch': 30, 'end_epoch': 50, 'factor': 0.1}, {'start_epoch': 50, 'end_epoch': 70, 'factor': 0.05}, {'start_epoch': 70, 'end_epoch': 90, 'factor': 0.01}]}, 'training': {'n_epochs': 90}, 'n_ranks': 1}
+2019-11-08 15:05:47,082 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-08 15:05:47,083 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+2019-11-08 15:05:48,068 INFO Loaded 1000 training samples
+2019-11-08 15:05:48,069 INFO Loaded 100 validation samples
+2019-11-08 15:05:48,069 INFO Choosing GPU 0
+2019-11-08 15:05:51,075 INFO Model: 
+GNNTrackCounter(
+  (input_network): Sequential(
+    (0): Linear(in_features=3, out_features=64, bias=True)
+    (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (2): Tanh()
+  )
+  (edge_network): EdgeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=134, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (node_network): NodeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=283, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=64, bias=True)
+      (10): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (11): Tanh()
+    )
+  )
+  (output_network): OutputNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=67, out_features=64, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): Tanh()
+      (4): Linear(in_features=64, out_features=64, bias=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=41, bias=True)
+    )
+  )
+)
+Parameters: 64298
+2019-11-08 15:05:51,075 INFO Epoch 0
+Prediction:  tensor([-0.2275,  0.0530,  0.0803, -0.2738, -0.1707, -0.0410, -0.1155, -0.1221,
+        -0.1738, -0.0815, -0.0532,  0.2155, -0.0148, -0.2882,  1.1603, -0.2040,
+         0.2535, -0.1217,  0.1528, -0.3386, -0.0323,  0.0591, -0.1672, -0.0886,
+        -0.2457, -0.3963, -0.1486, -0.1597,  0.0561, -0.1549, -0.0819, -0.2524,
+        -0.0535, -0.1789, -0.2349,  0.1302,  0.0191,  0.0860, -0.2469, -0.0726,
+        -0.2626], device='cuda:0', grad_fn=<AddBackward0>)  location:  tensor(14, device='cuda:0')
+Truth:  tensor(19, device='cuda:0')
+Prediction:  tensor([-0.1845, -0.3176,  0.0748, -0.3760, -0.1531, -0.1417, -0.0173, -0.0350,
+        -0.1358, -0.2190,  0.0525,  0.2206, -0.0739, -0.1137,  0.7523, -0.2398,
+         0.1062, -0.1688, -0.0183,  0.7206, -0.1960,  0.1661, -0.2973,  0.0716,
+        -0.1488, -0.3142, -0.1481, -0.3240, -0.1575, -0.0348, -0.0546, -0.1189,
+        -0.2854, -0.1844, -0.0823,  0.0536,  0.0909,  0.1162, -0.0253, -0.0778,
+        -0.2250], device='cuda:0', grad_fn=<AddBackward0>)  location:  tensor(14, device='cuda:0')
+Truth:  tensor(11, device='cuda:0')

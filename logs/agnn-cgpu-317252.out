@@ -1,0 +1,89 @@
+2019-11-08 14:56:13,991 INFO Initialized rank 0 out of 1
+2019-11-08 14:56:13,991 INFO Configuration: {'output_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001', 'trainer': {'name': 'gnn_sparse'}, 'data': {'name': 'hitgraphs_sparse', 'input_dir': '/global/cscratch1/sd/danieltm/ExaTrkX/counter_data/hitgraphs_small_000', 'n_train': 1000, 'n_valid': 100, 'real_weight': 3.0, 'batch_size': 1, 'n_workers': 4}, 'model': {'name': 'counter', 'input_dim': 3, 'hidden_dim': 64, 'layer_norm': True, 'n_graph_iters': 4, 'max_tracks': 40, 'loss_func': 'cross_entropy'}, 'optimizer': {'name': 'Adam', 'learning_rate': 0.1, 'lr_scaling': 'sqrt', 'lr_warmup_epochs': 5, 'lr_decay_schedule': [{'start_epoch': 10, 'end_epoch': 30, 'factor': 0.5}, {'start_epoch': 30, 'end_epoch': 50, 'factor': 0.1}, {'start_epoch': 50, 'end_epoch': 70, 'factor': 0.05}, {'start_epoch': 70, 'end_epoch': 90, 'factor': 0.01}]}, 'training': {'n_epochs': 90}, 'n_ranks': 1}
+2019-11-08 14:56:13,991 INFO Saving job outputs to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001
+2019-11-08 14:56:13,992 INFO Writing config via pickle to /global/cscratch1/sd/danieltm/ExaTrkX/counter_results/counter001/config.pkl
+2019-11-08 14:56:15,145 INFO Loaded 1000 training samples
+2019-11-08 14:56:15,145 INFO Loaded 100 validation samples
+2019-11-08 14:56:15,145 INFO Choosing GPU 0
+2019-11-08 14:56:18,467 INFO Model: 
+GNNTrackCounter(
+  (input_network): Sequential(
+    (0): Linear(in_features=3, out_features=64, bias=True)
+    (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+    (2): Tanh()
+  )
+  (edge_network): EdgeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=134, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+  (node_network): NodeNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=335, out_features=64, bias=True)
+      (1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (2): Tanh()
+      (3): Linear(in_features=64, out_features=64, bias=True)
+      (4): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=64, bias=True)
+      (7): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (8): Tanh()
+      (9): Linear(in_features=64, out_features=64, bias=True)
+      (10): LayerNorm((64,), eps=1e-05, elementwise_affine=True)
+      (11): Tanh()
+    )
+  )
+  (output_network): OutputNetwork(
+    (network): Sequential(
+      (0): Linear(in_features=67, out_features=64, bias=True)
+      (1): Tanh()
+      (2): Linear(in_features=64, out_features=64, bias=True)
+      (3): Tanh()
+      (4): Linear(in_features=64, out_features=64, bias=True)
+      (5): Tanh()
+      (6): Linear(in_features=64, out_features=41, bias=True)
+    )
+  )
+)
+Parameters: 67626
+2019-11-08 14:56:18,467 INFO Epoch 0
+torch.Size([107, 67]) torch.Size([107, 67]) torch.Size([107, 41]) torch.Size([107, 41]) torch.Size([107, 67]) torch.Size([107, 283])
+Traceback (most recent call last):
+  File "train.py", line 184, in <module>
+    main()
+  File "train.py", line 160, in main
+    **config['training'])
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/trainers/gnn_base.py", line 196, in train
+    summary = self.train_epoch(train_data_loader)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/trainers/gnn_sparse.py", line 28, in train_epoch
+    batch_output = self.model(batch)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/counter.py", line 127, in forward
+    x = self.node_network(x, e, o, inputs.edge_index)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/global/u2/d/danieltm/ExaTrkX/eta-tracker/models/counter.py", line 66, in forward
+    return self.network(node_inputs)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/functional.py", line 1369, in linear
+    ret = torch.addmm(bias, input, weight.t())
+RuntimeError: size mismatch, m1: [107 x 283], m2: [335 x 64] at /global/cscratch1/sd/swowner/pytorch-build/pytorch/v1.2.0-gpu/pytorch/aten/src/THC/generic/THCTensorMathBlas.cu:273
+srun: error: cgpu02: task 0: Exited with exit code 1
+srun: Terminating job step 317252.0
