@@ -11,4 +11,6 @@ This repository contains a collection of notebooks and automation scripts for de
 
 Much of the Sandbox notebook is interactive, and contains some visual icing. To view it properly, view the Binder page of the notebook:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/murnanedaniel/GNN-Sandbox/master?urlpath=https%3A%2F%2Fgithub.com%2Fmurnanedaniel%2FGNN-Sandbox%2Fblob%2Fmaster%2FSandbox.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/murnanedaniel/GNN-Sandbox/master?filepath=Sandbox.ipynb)
+
+NB: The Binder server may take 45-60 seconds to fire up.
