@@ -8,7 +8,6 @@ chardet==3.0.4
 cycler==0.10.0
 decorator==4.4.0
 defusedxml==0.5.0
-dl-comm
 entrypoints==0.3
 googledrivedownloader==0.4
 grpcio==1.24.3
