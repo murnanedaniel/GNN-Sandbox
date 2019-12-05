@@ -6,7 +6,7 @@ pipeline:
         - nodenet
         - shortcut
     - edgenet
-    - output
+    
     
 architecture:
     input:
@@ -15,6 +15,7 @@ architecture:
     edgenet: 
         type: edge
         convolution: end_concatenation
+        pooling: agg
         mlp: True
     nodenet:
         type: node
@@ -24,6 +25,7 @@ architecture:
     shortcut:
         type: node
         convolution: shortcut_concatenation
+        mlp: False
 
 # This is a temporary list - the proper loop n_iterations will be loaded from a hyperparameter config file
 loops:

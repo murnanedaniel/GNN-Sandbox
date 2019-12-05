@@ -124,6 +124,33 @@ def gen_edge_graph_class(event_size_min, event_size_max, max_curve, min_curve, h
     
     return data
 
+# Generate event data from random parameters
+def gen_edge_track_params(event_size_min, event_size_max, max_curve, min_curve, height, num_layers, max_angle):
+    radii, dirs, signs, event_size = rand_pars(event_size_min, event_size_max, max_curve, min_curve)
+    xys = []
+    X = np.empty([6,1])
+    x = np.arange(0 + height/num_layers,height + height/num_layers, height/num_layers)
+    i = 0
+    for r, d, s in zip(radii, dirs, signs):
+        y1test = y1(x, r, d, s)
+    #     print(y1test, x)
+        y2test = y2(x, r, d, s)
+        if -2.5 < y1test[0] < 2.5 and not any(np.isnan(y1test)):
+            X = np.append(X, np.vstack((y1test, np.array([i]*len(y1test)), x, np.array([r]*len(y1test))/max_curve, np.array([d]*len(y1test))/max_curve, np.array([s]*len(y1test)) )), axis=1)
+            i += 1
+        if -2.5 < y2test[0] < 2.5 and not any(np.isnan(y2test)):
+            X = np.append(X, np.vstack((y2test, np.array([i]*len(y2test)), x, np.array([r]*len(y2test))/max_curve, np.array([d]*len(y2test))/max_curve, np.array([s]*len(y2test)) )), axis=1)
+            i += 1
+    X = X[:,1:].T
+    np.random.shuffle(X)
+    
+    e = np.array([[i,j] for layer in np.arange(num_layers) for i in np.argwhere(X[:,2] == layer) for j in np.argwhere(X[:,2] == (layer+1)) if (X[i, 0] - np.tan(max_angle/2) < X[j, 0] < X[i, 0] + np.tan(max_angle/2))]).T[0]
+    y_edge = np.array([int(i[1] == j[1]) for i,j in zip(X[e[0]], X[e[1]])])
+    
+    data = Data(x = torch.from_numpy(np.array([X[:,2], X[:,0]]).T).float(), edge_index = torch.from_numpy(e), y = torch.from_numpy(y_edge), y_nodes = torch.from_numpy(np.array([X[:,3], X[:,4], X[:,5]]).T).float())
+    
+    return data
+
 #________________________________________________________________________
 
 # def plot
@@ -186,10 +213,10 @@ class NodeNetwork(nn.Module):
     them with the node's previous features in a fully-connected
     network to compute the new features.
     """
-    def __init__(self, input_dim, output_dim, hidden_activation=nn.Tanh,
+    def __init__(self, input_dim, hidden_dim, output_dim, hidden_activation=nn.Tanh,
                  layer_norm=True):
         super(NodeNetwork, self).__init__()
-        self.network = make_mlp(input_dim*3, [output_dim]*4,
+        self.network = make_mlp(input_dim*3, [hidden_dim, hidden_dim, hidden_dim, output_dim],
                                 hidden_activation=hidden_activation,
                                 output_activation=hidden_activation,
                                 layer_norm=layer_norm)
@@ -220,7 +247,7 @@ class Edge_Class_Net(nn.Module):
         self.edge_network = EdgeNetwork(input_dim+hidden_dim, hidden_dim,
                                         hidden_activation, layer_norm=layer_norm)
         # Setup the node layers
-        self.node_network = NodeNetwork(input_dim+hidden_dim, hidden_dim,
+        self.node_network = NodeNetwork(input_dim+hidden_dim, hidden_dim, hidden_dim,
                                         hidden_activation, layer_norm=layer_norm)
 
     def forward(self, inputs):
@@ -402,6 +429,53 @@ class Edge_Graph_Class_Net(nn.Module):
         o = self.out_network(x, inputs.batch)
         return self.edge_network(x, inputs.edge_index), o
     
+    
+#__________________ Combined Edge & Track Param Classifier ___________
+
+
+class Edge_Track_Net(nn.Module):
+    """
+    Segment classification graph neural network model.
+    Consists of an input network, an edge network, and a node network.
+    """
+    def __init__(self, input_dim=3, hidden_dim=8, n_graph_iters=3,
+                 output_dim=3, hidden_activation=nn.Tanh, layer_norm=True):
+        super(Edge_Track_Net, self).__init__()
+        self.n_graph_iters = n_graph_iters
+        # Setup the input network
+        self.input_network = make_mlp(input_dim, [hidden_dim],
+                                      output_activation=hidden_activation,
+                                      layer_norm=layer_norm)
+        # Setup the edge network
+        self.edge_network = EdgeNetwork(input_dim+hidden_dim, hidden_dim,
+                                        hidden_activation, layer_norm=layer_norm)
+        # Setup the node layers
+        self.node_network = NodeNetwork(input_dim+hidden_dim, hidden_dim,
+                                        hidden_activation, layer_norm=False)
+        
+        self.output_network = make_mlp(input_dim+hidden_dim, [hidden_dim, output_dim],
+                                      output_activation=hidden_activation,
+                                      layer_norm=False)
+
+    def forward(self, inputs):
+        """Apply forward pass of the model"""
+        # Apply input network to get hidden representation
+        x = self.input_network(inputs.x)
+        # Shortcut connect the inputs onto the hidden representation
+        x = torch.cat([x, inputs.x], dim=-1)
+        # Loop over iterations of edge and node networks
+        for i in range(self.n_graph_iters):
+            # Apply edge network
+            e = torch.sigmoid(self.edge_network(x, inputs.edge_index))
+            # Apply node network
+            x = self.node_network(x, e, inputs.edge_index)
+            # Shortcut connect the inputs onto the hidden representation
+            x = torch.cat([x, inputs.x], dim=-1)
+        # Apply final edge network
+        return self.edge_network(x, inputs.edge_index), self.output_network(x)
+    
+
+
 #___________________________________________________________________
     
 # class GCNConv(MessagePassing):
