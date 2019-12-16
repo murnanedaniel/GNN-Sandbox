@@ -1,0 +1,29 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.18
+    is_jupyter_run: true
+    python_version: 3.6.9
+edges:
+  desc: null
+  value: 'true'
+gamma:
+  desc: null
+  value: 0.8
+hidden_dim:
+  desc: null
+  value: 16
+input_dim:
+  desc: null
+  value: 3
+n_graph_iters:
+  desc: null
+  value: 3
+output_dim:
+  desc: null
+  value: 1
+step_size:
+  desc: null
+  value: 20
