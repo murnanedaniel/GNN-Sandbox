@@ -1,0 +1,22 @@
+Loading data...
+Using  cuda
+Training...
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/global/homes/d/danieltm/.local/cori/pytorchv1.2.0-gpu/lib/python3.6/site-packages/wandb/wandb_agent.py", line 63, in _start
+    function()
+  File "sweep.py", line 162, in train
+    node_pred = model(data)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "sweep.py", line 90, in forward
+    x = self.node_network(x, e, inputs.edge_index)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "sweep.py", line 49, in forward
+    mi = scatter_add(e[:, None] * x[start], end, dim=0, dim_size=x.shape[0])
+NameError: name 'scatter_add' is not defined

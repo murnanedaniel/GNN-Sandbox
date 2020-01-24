@@ -1,0 +1,34 @@
+method: bayes
+metric:
+  goal: maximize
+  name: Best Accuracy
+name: Track Param Sweep
+parameters:
+  hidden_dim:
+    distribution: q_log_normal
+    max: 4.159
+    min: 1.386
+    mu: 2.8
+    sigma: 0.8
+  lr:
+    distribution: log_normal
+    max: -2.3
+    min: -11.5
+    mu: -6.9
+    sigma: 1.5
+  n_graph_iters:
+    max: 8
+    min: 1
+  network:
+    values:
+    - Edge_Track_Truth_Net
+  optimizer:
+    values:
+    - AdamW
+  train_size:
+    max: 800
+    min: 100
+  weight_decay:
+    distribution: log_uniform
+    max: -4.6
+    min: -11.5

@@ -1,0 +1,17 @@
+{"system.gpu.0.gpu": 36.2, "system.gpu.0.memory": 12.27, "system.gpu.0.memory_allocated": 7.67, "system.gpu.0.temp": 43.27, "_wandb": true, "_timestamp": 1576867698, "_runtime": 5704}
+{"system.gpu.0.gpu": 53.0, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 44.87, "_wandb": true, "_timestamp": 1576867728, "_runtime": 5734}
+{"system.gpu.0.gpu": 53.27, "system.gpu.0.memory": 18.6, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 44.93, "_wandb": true, "_timestamp": 1576867759, "_runtime": 5764}
+{"system.gpu.0.gpu": 51.8, "system.gpu.0.memory": 18.07, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576867789, "_runtime": 5794}
+{"system.gpu.0.gpu": 52.6, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576867819, "_runtime": 5824}
+{"system.gpu.0.gpu": 47.47, "system.gpu.0.memory": 16.53, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576867849, "_runtime": 5855}
+{"system.gpu.0.gpu": 52.2, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576867880, "_runtime": 5885}
+{"system.gpu.0.gpu": 53.0, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576867910, "_runtime": 5915}
+{"system.gpu.0.gpu": 50.73, "system.gpu.0.memory": 17.53, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.07, "_wandb": true, "_timestamp": 1576867940, "_runtime": 5945}
+{"system.gpu.0.gpu": 52.67, "system.gpu.0.memory": 18.07, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.07, "_wandb": true, "_timestamp": 1576867970, "_runtime": 5976}
+{"system.gpu.0.gpu": 52.67, "system.gpu.0.memory": 18.27, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868001, "_runtime": 6006}
+{"system.gpu.0.gpu": 52.73, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868031, "_runtime": 6036}
+{"system.gpu.0.gpu": 51.07, "system.gpu.0.memory": 17.87, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868061, "_runtime": 6066}
+{"system.gpu.0.gpu": 51.87, "system.gpu.0.memory": 17.93, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868091, "_runtime": 6097}
+{"system.gpu.0.gpu": 54.47, "system.gpu.0.memory": 18.8, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868121, "_runtime": 6127}
+{"system.gpu.0.gpu": 52.4, "system.gpu.0.memory": 18.33, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 45.0, "_wandb": true, "_timestamp": 1576868152, "_runtime": 6157}
+{"system.gpu.0.gpu": 48.0, "system.gpu.0.memory": 16.8, "system.gpu.0.memory_allocated": 10.56, "system.gpu.0.temp": 44.8, "_wandb": true, "_timestamp": 1576868161, "_runtime": 6166}

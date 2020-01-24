@@ -1,0 +1,1 @@
+/var/spool/escori.slurmd/job386075/slurm_script: line 18: 33842 Segmentation fault      srun -u python sweeps/edge_sweep.py sweeps/edge_config.yaml

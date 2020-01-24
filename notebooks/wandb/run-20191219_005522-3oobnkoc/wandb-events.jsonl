@@ -1,0 +1,2 @@
+{"system.gpu.0.gpu": 54.13, "system.gpu.0.memory": 44.87, "system.gpu.0.memory_allocated": 28.51, "system.gpu.0.temp": 36.47, "_wandb": true, "_timestamp": 1576716979, "_runtime": 1038}
+{"system.gpu.0.gpu": 61.87, "system.gpu.0.memory": 50.8, "system.gpu.0.memory_allocated": 30.81, "system.gpu.0.temp": 40.73, "_wandb": true, "_timestamp": 1576717009, "_runtime": 1068}

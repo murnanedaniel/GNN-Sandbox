@@ -1,0 +1,11 @@
+{"system.gpu.0.gpu": 54.73, "system.gpu.0.memory": 28.53, "system.gpu.0.memory_allocated": 17.36, "system.gpu.0.temp": 44.93, "_wandb": true, "_timestamp": 1576868201, "_runtime": 6206}
+{"system.gpu.0.gpu": 72.73, "system.gpu.0.memory": 37.53, "system.gpu.0.memory_allocated": 23.11, "system.gpu.0.temp": 48.27, "_wandb": true, "_timestamp": 1576868231, "_runtime": 6237}
+{"system.gpu.0.gpu": 70.4, "system.gpu.0.memory": 36.6, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 49.67, "_wandb": true, "_timestamp": 1576868262, "_runtime": 6267}
+{"system.gpu.0.gpu": 66.53, "system.gpu.0.memory": 34.8, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 50.0, "_wandb": true, "_timestamp": 1576868292, "_runtime": 6297}
+{"system.gpu.0.gpu": 73.47, "system.gpu.0.memory": 37.93, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 50.87, "_wandb": true, "_timestamp": 1576868322, "_runtime": 6328}
+{"system.gpu.0.gpu": 72.47, "system.gpu.0.memory": 37.93, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.0, "_wandb": true, "_timestamp": 1576868353, "_runtime": 6358}
+{"system.gpu.0.gpu": 70.73, "system.gpu.0.memory": 36.8, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.07, "_wandb": true, "_timestamp": 1576868383, "_runtime": 6388}
+{"system.gpu.0.gpu": 72.2, "system.gpu.0.memory": 37.53, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.27, "_wandb": true, "_timestamp": 1576868413, "_runtime": 6419}
+{"system.gpu.0.gpu": 68.27, "system.gpu.0.memory": 35.4, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.07, "_wandb": true, "_timestamp": 1576868444, "_runtime": 6449}
+{"system.gpu.0.gpu": 69.67, "system.gpu.0.memory": 36.33, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.2, "_wandb": true, "_timestamp": 1576868474, "_runtime": 6479}
+{"system.gpu.0.gpu": 68.25, "system.gpu.0.memory": 35.42, "system.gpu.0.memory_allocated": 23.57, "system.gpu.0.temp": 51.33, "_wandb": true, "_timestamp": 1576868498, "_runtime": 6503}

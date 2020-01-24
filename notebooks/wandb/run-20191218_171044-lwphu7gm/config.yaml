@@ -1,0 +1,36 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.18
+    framework: torch
+    is_jupyter_run: true
+    python_version: 3.6.9
+alpha:
+  desc: null
+  value: 0.15240340528037002
+hidden_dim:
+  desc: null
+  value: 156
+lr:
+  desc: null
+  value: 0.003156054796372245
+n_graph_iters:
+  desc: null
+  value: 1
+network:
+  desc: null
+  value: Edge_Track_Truth_Net
+optimizer:
+  desc: null
+  value: Adam
+step_size:
+  desc: null
+  value: 14
+train_size:
+  desc: null
+  value: 261
+weight_decay:
+  desc: null
+  value: 0.00020435596044484703

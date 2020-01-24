@@ -1,0 +1,28 @@
+{
+    "root": "/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/murnanedaniel/GNN-Sandbox.git",
+        "commit": "69d80a3e498659b30768ee9a009ba68a631473a6"
+    },
+    "email": "murnanedaniel@hotmail.com",
+    "startedAt": "2019-12-19T22:15:49.731279",
+    "host": "cgpu02",
+    "username": "danieltm",
+    "executable": "/usr/common/software/pytorch/v1.2.0-gpu/bin/python",
+    "os": "Linux-4.12.14-lp150.12.79-default-x86_64-with-glibc2.9",
+    "python": "3.6.9",
+    "gpu": "Tesla V100-SXM2-16GB",
+    "gpu_count": 1,
+    "cpu_count": 80,
+    "args": [
+        "-f",
+        "/global/u2/d/danieltm/.local/share/jupyter/runtime/kernel-11331336-8be1-4f62-bedd-d302433f975f.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "curious-sweep-4",
+    "project": "node_regression_sweep",
+    "heartbeatAt": "2019-12-20T00:10:28.493890"
+}

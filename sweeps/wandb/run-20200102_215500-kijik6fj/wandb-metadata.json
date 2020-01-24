@@ -1,0 +1,24 @@
+{
+    "root": "/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox",
+    "program": "edge_sweep.py",
+    "git": {
+        "remote": "https://github.com/murnanedaniel/GNN-Sandbox.git",
+        "commit": "69d80a3e498659b30768ee9a009ba68a631473a6"
+    },
+    "email": "murnanedaniel@hotmail.com",
+    "startedAt": "2020-01-02T21:55:00.920644",
+    "host": "cgpu04",
+    "username": "danieltm",
+    "executable": "/usr/common/software/pytorch/v1.2.0-gpu/bin/python",
+    "os": "Linux-4.12.14-lp150.12.79-default-x86_64-with-glibc2.9",
+    "python": "3.6.9",
+    "cpu_count": 80,
+    "args": [
+        "edge_config.yaml"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "project": "edge_classification_sweep",
+    "heartbeatAt": "2020-01-02T21:58:45.942800"
+}

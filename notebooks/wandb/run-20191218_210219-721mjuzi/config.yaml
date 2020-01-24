@@ -1,0 +1,35 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.18
+    is_jupyter_run: true
+    python_version: 3.6.9
+alpha:
+  desc: null
+  value: 0.49609824203916797
+hidden_dim:
+  desc: null
+  value: 8
+lr:
+  desc: null
+  value: 0.0062292794549131765
+n_graph_iters:
+  desc: null
+  value: 5
+network:
+  desc: null
+  value: Edge_Track_Truth_Net
+optimizer:
+  desc: null
+  value: Adam
+step_size:
+  desc: null
+  value: 41
+train_size:
+  desc: null
+  value: 422
+weight_decay:
+  desc: null
+  value: 3.5365745966972876e-05

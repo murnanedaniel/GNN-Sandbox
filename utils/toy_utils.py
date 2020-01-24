@@ -14,18 +14,37 @@ import numpy as np
 import pandas as pd
 import sklearn.metrics
 import torch
-from torch_geometric.data import Data
 import torch.nn.functional as F
 import torch.nn as nn
 # from torch_geometric.nn import GCNConv
-from torch_geometric.nn import MessagePassing
-import torch_geometric.nn as tnn
-from torch_geometric.utils import add_self_loops, degree
-from torch_scatter import *
+# from torch_geometric.nn import MessagePassing
+# import torch_geometric.nn as tnn
+# from torch_geometric.utils import add_self_loops, degree
+# from torch_scatter import *
 
 # Locals
 from torch_geometric.data import Batch
+from datasets.hitgraphs_params import load_graph
 
+
+# Data Loading
+
+def load_data(train_size=300, test_size=10):
+    
+    import torch_geometric.data
+    
+    input_dir = "/global/cscratch1/sd/danieltm/ExaTrkX/node_tracker_data/hitgraphs_med_000/"
+    filenames = [os.path.join(input_dir, f) for f in os.listdir(input_dir)
+                         if f.endswith('.npz') and not f.endswith('_ID.npz')]
+    train_graphs = [load_graph(fi) for fi in filenames[:train_size]]
+    test_graphs = [load_graph(fi) for fi in filenames[:test_size]]
+    train_dataset = [torch_geometric.data.Data(x=torch.from_numpy(di[0]),
+                                         edge_index=torch.from_numpy(di[1]), y_edges=torch.from_numpy(di[2]), 
+                                         y_params=(torch.from_numpy(di[3][:,0]).unsqueeze(1)), pid=torch.from_numpy(di[4])) for di in train_graphs]
+    test_dataset = [torch_geometric.data.Data(x=torch.from_numpy(di[0]),
+                                         edge_index=torch.from_numpy(di[1]), y_edges=torch.from_numpy(di[2]), 
+                                         y_params=(torch.from_numpy(di[3][:,0]).unsqueeze(1)), pid=torch.from_numpy(di[4])) for di in test_graphs]
+    return train_dataset, test_dataset
 
 # Some dumb circle calculations
 def y1(x, r, a, sign):

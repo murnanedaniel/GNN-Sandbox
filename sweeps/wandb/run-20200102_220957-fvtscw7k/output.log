@@ -1,0 +1,251 @@
+Loading data...
+Using  cuda
+Training...
+Epoch:  1
+Epoch:  1 , validation loss:  0.7311004002888998 , validation accuracy:  82.57774493885648 %, lr:  0.011405894392477973
+Epoch:  2
+Epoch:  2 , validation loss:  0.7256696224212646 , validation accuracy:  83.34145682699442 %, lr:  0.011405894392477973
+Epoch:  3
+Epoch:  3 , validation loss:  0.7066450119018555 , validation accuracy:  81.44350860417681 %, lr:  0.011405894392477973
+Epoch:  4
+Epoch:  4 , validation loss:  0.6498226324717203 , validation accuracy:  94.20929431158824 %, lr:  0.011405894392477973
+Epoch:  5
+Epoch:  5 , validation loss:  0.6442911227544149 , validation accuracy:  95.1906330426468 %, lr:  0.011405894392477973
+Epoch:  6
+Epoch:  6 , validation loss:  0.636546770731608 , validation accuracy:  95.92795651188565 %, lr:  0.011405894392477973
+Epoch:  7
+Epoch:  7 , validation loss:  0.6364197731018066 , validation accuracy:  95.98213038362552 %, lr:  0.011405894392477973
+Epoch:  8
+Epoch:  8 , validation loss:  0.6342360178629557 , validation accuracy:  96.22754267938693 %, lr:  0.011405894392477973
+Epoch:  9
+Epoch:  9 , validation loss:  0.6337090730667114 , validation accuracy:  96.42809466301989 %, lr:  0.011405894392477973
+Epoch:  10
+Epoch:  10 , validation loss:  0.6342323621114095 , validation accuracy:  96.38913293864537 %, lr:  0.011405894392477973
+Epoch:  11
+Epoch:  11 , validation loss:  0.6322148640950521 , validation accuracy:  96.54482461014992 %, lr:  0.011405894392477973
+Epoch:  12
+Epoch:  12 , validation loss:  0.6317007144292196 , validation accuracy:  96.68809820217254 %, lr:  0.011405894392477973
+Epoch:  13
+Epoch:  13 , validation loss:  0.6319711605707804 , validation accuracy:  96.63128548854277 %, lr:  0.011405894392477973
+Epoch:  14
+Epoch:  14 , validation loss:  0.6325706243515015 , validation accuracy:  96.72969876843696 %, lr:  0.011405894392477973
+Epoch:  15
+Epoch:  15 , validation loss:  0.6339926322301229 , validation accuracy:  96.59775667394159 %, lr:  0.011405894392477973
+Epoch:  16
+Epoch:  16 , validation loss:  0.6314923763275146 , validation accuracy:  96.88073366013579 %, lr:  0.011405894392477973
+Epoch:  17
+Epoch:  17 , validation loss:  0.6305797100067139 , validation accuracy:  96.93009552607641 %, lr:  0.011405894392477973
+Epoch:  18
+Epoch:  18 , validation loss:  0.6319143374760946 , validation accuracy:  96.84208238774832 %, lr:  0.011405894392477973
+Epoch:  19
+Epoch:  19 , validation loss:  0.6306047042210897 , validation accuracy:  96.9999472231622 %, lr:  0.011405894392477973
+Epoch:  20
+Epoch:  20 , validation loss:  0.6303342978159586 , validation accuracy:  96.92916417011527 %, lr:  0.011405894392477973
+Epoch:  21
+Epoch:  21 , validation loss:  0.6328050295511881 , validation accuracy:  96.51331373346456 %, lr:  0.011405894392477973
+Epoch:  22
+Epoch:  22 , validation loss:  0.6300739844640096 , validation accuracy:  96.94235837956481 %, lr:  0.011405894392477973
+Epoch:  23
+Epoch:  23 , validation loss:  0.6925553480784098 , validation accuracy:  87.4079121793419 %, lr:  0.011405894392477973
+Epoch:  24
+Epoch:  24 , validation loss:  0.6529173453648885 , validation accuracy:  93.60670700472818 %, lr:  0.011405894392477973
+Epoch:  25
+Epoch:  25 , validation loss:  0.6491630872090658 , validation accuracy:  94.05515490001893 %, lr:  0.011405894392477973
+Epoch:  26
+Epoch:  26 , validation loss:  0.6477813720703125 , validation accuracy:  94.67217822427672 %, lr:  0.011405894392477973
+Epoch:  27
+Epoch:  27 , validation loss:  0.6445638338724772 , validation accuracy:  95.00901863022374 %, lr:  0.011405894392477973
+Epoch:  28
+Epoch:  28 , validation loss:  0.6484381357828776 , validation accuracy:  94.39184007997244 %, lr:  0.011405894392477973
+Epoch:  29
+Epoch:  29 , validation loss:  0.6431955893834432 , validation accuracy:  95.0572939142097 %, lr:  0.011405894392477973
+Epoch:  30
+Epoch:  30 , validation loss:  0.6423623959223429 , validation accuracy:  95.00343049445688 %, lr:  0.011405894392477973
+Epoch:  31
+Epoch:  31 , validation loss:  0.645242969195048 , validation accuracy:  94.88778712928152 %, lr:  0.011405894392477973
+Epoch:  32
+Epoch:  32 , validation loss:  0.6440301736195883 , validation accuracy:  94.6538615570409 %, lr:  0.011405894392477973
+Epoch:  33
+Epoch:  33 , validation loss:  0.6432443857192993 , validation accuracy:  95.06288204997657 %, lr:  0.011405894392477973
+Epoch:  34
+Epoch:  34 , validation loss:  0.6425350109736124 , validation accuracy:  95.23533812878169 %, lr:  0.011405894392477973
+Epoch:  35
+Epoch:  35 , validation loss:  0.6422627766927084 , validation accuracy:  95.07685238939372 %, lr:  0.011405894392477973
+Epoch:  36
+Epoch:  36 , validation loss:  0.643169641494751 , validation accuracy:  95.14049504673855 %, lr:  0.011405894392477973
+Epoch:  37
+Epoch:  37 , validation loss:  0.6427826881408691 , validation accuracy:  94.84121933122432 %, lr:  0.011405894392477973
+Epoch:  38
+Epoch:  38 , validation loss:  0.6423368453979492 , validation accuracy:  95.18970168668565 %, lr:  0.011405894392477973
+Epoch:  39
+Epoch:  39 , validation loss:  0.6420323451360067 , validation accuracy:  95.25008459816647 %, lr:  0.011405894392477973
+Epoch:  40
+Epoch:  40 , validation loss:  0.6435583432515463 , validation accuracy:  95.02842187941424 %, lr:  0.011405894392477973
+Epoch:  41
+Epoch:  41 , validation loss:  0.6425454219182333 , validation accuracy:  95.14437569657665 %, lr:  0.011405894392477973
+Epoch:  42
+Epoch:  42 , validation loss:  0.6428672870000204 , validation accuracy:  95.07328219154266 %, lr:  0.011405894392477973
+Epoch:  43
+Epoch:  43 , validation loss:  0.6416666905085245 , validation accuracy:  95.07793897134839 %, lr:  0.0037639451495177314
+Epoch:  44
+Epoch:  44 , validation loss:  0.6402432521184286 , validation accuracy:  95.44691115795486 %, lr:  0.0037639451495177314
+Epoch:  45
+Epoch:  45 , validation loss:  0.6399029095967611 , validation accuracy:  95.50558658350693 %, lr:  0.0037639451495177314
+Epoch:  46
+Epoch:  46 , validation loss:  0.6416955788930258 , validation accuracy:  95.25023982416 %, lr:  0.0037639451495177314
+Epoch:  47
+Epoch:  47 , validation loss:  0.6419794956843058 , validation accuracy:  95.09578996060364 %, lr:  0.0037639451495177314
+Epoch:  48
+Epoch:  48 , validation loss:  0.6409657001495361 , validation accuracy:  95.23052612298245 %, lr:  0.0037639451495177314
+Epoch:  49
+Epoch:  49 , validation loss:  0.640684962272644 , validation accuracy:  95.3325096007277 %, lr:  0.0037639451495177314
+Epoch:  50
+Epoch:  50 , validation loss:  0.6399529377619425 , validation accuracy:  95.49844618780482 %, lr:  0.0037639451495177314
+Epoch:  51
+Epoch:  51 , validation loss:  0.640372077624003 , validation accuracy:  95.35765621167859 %, lr:  0.0037639451495177314
+Epoch:  52
+Epoch:  52 , validation loss:  0.6403012275695801 , validation accuracy:  95.51303743119608 %, lr:  0.0037639451495177314
+Epoch:  53
+Epoch:  53 , validation loss:  0.6397085984547933 , validation accuracy:  95.53414816631533 %, lr:  0.0037639451495177314
+Epoch:  54
+Epoch:  54 , validation loss:  0.6403272946675619 , validation accuracy:  95.49922231777245 %, lr:  0.0037639451495177314
+Epoch:  55
+Epoch:  55 , validation loss:  0.6396594444910685 , validation accuracy:  95.48183700649776 %, lr:  0.0037639451495177314
+Epoch:  56
+Epoch:  56 , validation loss:  0.63908851146698 , validation accuracy:  95.60198192548532 %, lr:  0.0037639451495177314
+Epoch:  57
+Epoch:  57 , validation loss:  0.6393420696258545 , validation accuracy:  95.5519991555706 %, lr:  0.0037639451495177314
+Epoch:  58
+Epoch:  58 , validation loss:  0.6403505404790243 , validation accuracy:  95.4154002812695 %, lr:  0.0037639451495177314
+Epoch:  59
+Epoch:  59 , validation loss:  0.6421190102895101 , validation accuracy:  95.16626256166353 %, lr:  0.0037639451495177314
+Epoch:  60
+Epoch:  60 , validation loss:  0.6480516592661539 , validation accuracy:  94.35893216934535 %, lr:  0.0037639451495177314
+Epoch:  61
+Epoch:  61 , validation loss:  0.6441236337025961 , validation accuracy:  94.90703515247849 %, lr:  0.0037639451495177314
+Epoch:  62
+Epoch:  62 , validation loss:  0.642554521560669 , validation accuracy:  95.10820804008556 %, lr:  0.0037639451495177314
+Epoch:  63
+Epoch:  63 , validation loss:  0.642983873685201 , validation accuracy:  95.07204038359448 %, lr:  0.0037639451495177314
+Epoch:  64
+Epoch:  64 , validation loss:  0.642136812210083 , validation accuracy:  95.19513459645898 %, lr:  0.0012421018993408514
+Epoch:  65
+Epoch:  65 , validation loss:  0.6417620182037354 , validation accuracy:  95.24698007829599 %, lr:  0.0012421018993408514
+Epoch:  66
+Epoch:  66 , validation loss:  0.6413337389628092 , validation accuracy:  95.29898078612652 %, lr:  0.0012421018993408514
+Epoch:  67
+Epoch:  67 , validation loss:  0.641242504119873 , validation accuracy:  95.2975837521848 %, lr:  0.0012421018993408514
+Epoch:  68
+Epoch:  68 , validation loss:  0.6409792502721151 , validation accuracy:  95.33188869675361 %, lr:  0.0012421018993408514
+Epoch:  69
+Epoch:  69 , validation loss:  0.6409382422765096 , validation accuracy:  95.36246821747783 %, lr:  0.0012421018993408514
+Epoch:  70
+Epoch:  70 , validation loss:  0.6409831841786703 , validation accuracy:  95.41446892530836 %, lr:  0.0012421018993408514
+Epoch:  71
+Epoch:  71 , validation loss:  0.6405065059661865 , validation accuracy:  95.43666624238229 %, lr:  0.0012421018993408514
+Epoch:  72
+Epoch:  72 , validation loss:  0.6402597030003866 , validation accuracy:  95.45715607352744 %, lr:  0.0012421018993408514
+Epoch:  73
+Epoch:  73 , validation loss:  0.6407702763875326 , validation accuracy:  95.42719745677732 %, lr:  0.0012421018993408514
+Epoch:  74
+Epoch:  74 , validation loss:  0.6400605042775472 , validation accuracy:  95.47764590467261 %, lr:  0.0012421018993408514
+Epoch:  75
+Epoch:  75 , validation loss:  0.6401418050130209 , validation accuracy:  95.48944308018044 %, lr:  0.0012421018993408514
+Epoch:  76
+Epoch:  76 , validation loss:  0.6399436394373575 , validation accuracy:  95.50822542539683 %, lr:  0.0012421018993408514
+Epoch:  77
+Epoch:  77 , validation loss:  0.639864444732666 , validation accuracy:  95.49953276975948 %, lr:  0.0012421018993408514
+Epoch:  78
+Epoch:  78 , validation loss:  0.6399819056193033 , validation accuracy:  95.49813573581778 %, lr:  0.0012421018993408514
+Epoch:  79
+Epoch:  79 , validation loss:  0.6397351423899332 , validation accuracy:  95.51722853302122 %, lr:  0.0012421018993408514
+Epoch:  80
+Epoch:  80 , validation loss:  0.6397299766540527 , validation accuracy:  95.53927062410162 %, lr:  0.0012421018993408514
+Epoch:  81
+Epoch:  81 , validation loss:  0.639968474706014 , validation accuracy:  95.48307881444596 %, lr:  0.0012421018993408514
+Epoch:  82
+Epoch:  82 , validation loss:  0.639951229095459 , validation accuracy:  95.54532443784906 %, lr:  0.0012421018993408514
+Epoch:  83
+Epoch:  83 , validation loss:  0.6397102276484171 , validation accuracy:  95.57388602065747 %, lr:  0.0012421018993408514
+Epoch:  84
+Epoch:  84 , validation loss:  0.6395960251490275 , validation accuracy:  95.51583149907951 %, lr:  0.0012421018993408514
+Epoch:  85
+Epoch:  85 , validation loss:  0.6399408976236979 , validation accuracy:  95.51536582109894 %, lr:  0.000409893626782481
+Epoch:  86
+Epoch:  86 , validation loss:  0.6395024458567301 , validation accuracy:  95.56829788489061 %, lr:  0.000409893626782481
+Epoch:  87
+Epoch:  87 , validation loss:  0.6394431591033936 , validation accuracy:  95.57388602065747 %, lr:  0.000409893626782481
+Epoch:  88
+Epoch:  88 , validation loss:  0.6393762032190958 , validation accuracy:  95.5901847499775 %, lr:  0.000409893626782481
+Epoch:  89
+Epoch:  89 , validation loss:  0.6395503679911295 , validation accuracy:  95.54004675406925 %, lr:  0.000409893626782481
+Epoch:  90
+Epoch:  90 , validation loss:  0.6393964687983195 , validation accuracy:  95.59033997597102 %, lr:  0.000409893626782481
+Epoch:  91
+Epoch:  91 , validation loss:  0.6393950382868449 , validation accuracy:  95.59080565395158 %, lr:  0.000409893626782481
+Epoch:  92
+Epoch:  92 , validation loss:  0.6393011808395386 , validation accuracy:  95.60586257532341 %, lr:  0.000409893626782481
+Epoch:  93
+Epoch:  93 , validation loss:  0.6392664909362793 , validation accuracy:  95.5967042417055 %, lr:  0.000409893626782481
+Epoch:  94
+Epoch:  94 , validation loss:  0.6391406853993734 , validation accuracy:  95.61145071109027 %, lr:  0.000409893626782481
+Epoch:  95
+Epoch:  95 , validation loss:  0.6391695737838745 , validation accuracy:  95.60353418542056 %, lr:  0.000409893626782481
+Epoch:  96
+Epoch:  96 , validation loss:  0.6393103202184042 , validation accuracy:  95.59794604965369 %, lr:  0.000409893626782481
+Epoch:  97
+Epoch:  97 , validation loss:  0.6390950282414755 , validation accuracy:  95.59359972183502 %, lr:  0.000409893626782481
+Epoch:  98
+Epoch:  98 , validation loss:  0.6391937732696533 , validation accuracy:  95.62433446855276 %, lr:  0.000409893626782481
+Epoch:  99
+Epoch:  99 , validation loss:  0.6391169627507528 , validation accuracy:  95.61377910099313 %, lr:  0.000409893626782481
+Epoch:  100
+Epoch:  100 , validation loss:  0.6391271750132242 , validation accuracy:  95.60725960926513 %, lr:  0.000409893626782481
+Epoch:  101
+Epoch:  101 , validation loss:  0.6394193569819132 , validation accuracy:  95.57900847844377 %, lr:  0.000409893626782481
+Epoch:  102
+Epoch:  102 , validation loss:  0.6399012406667074 , validation accuracy:  95.51753898500827 %, lr:  0.000409893626782481
+Epoch:  103
+Epoch:  103 , validation loss:  0.6390742460886637 , validation accuracy:  95.61564181291541 %, lr:  0.000409893626782481
+Epoch:  104
+Epoch:  104 , validation loss:  0.6390865246454874 , validation accuracy:  95.62402401656573 %, lr:  0.000409893626782481
+Epoch:  105
+Epoch:  105 , validation loss:  0.6391369899113973 , validation accuracy:  95.60524167134932 %, lr:  0.000409893626782481
+Epoch:  106
+Epoch:  106 , validation loss:  0.6391640504201254 , validation accuracy:  95.64187500582098 %, lr:  0.00013526489683821874
+Epoch:  107
+Epoch:  107 , validation loss:  0.6396031379699707 , validation accuracy:  95.56565904300071 %, lr:  0.00013526489683821874
+Epoch:  108
+Epoch:  108 , validation loss:  0.6390592654546102 , validation accuracy:  95.6283703443844 %, lr:  0.00013526489683821874
+Epoch:  109
+Epoch:  109 , validation loss:  0.6391477982203165 , validation accuracy:  95.63923616393106 %, lr:  0.00013526489683821874
+Epoch:  110
+Epoch:  110 , validation loss:  0.6390713850657145 , validation accuracy:  95.63069873428725 %, lr:  0.00013526489683821874
+Epoch:  111
+Epoch:  111 , validation loss:  0.6391697724660238 , validation accuracy:  95.61346864900608 %, lr:  0.00013526489683821874
+Epoch:  112
+Epoch:  112 , validation loss:  0.6389968395233154 , validation accuracy:  95.62743898842324 %, lr:  0.00013526489683821874
+Epoch:  113
+Epoch:  113 , validation loss:  0.6389952103296915 , validation accuracy:  95.63457938412535 %, lr:  0.00013526489683821874
+Epoch:  114
+Epoch:  114 , validation loss:  0.6390470266342163 , validation accuracy:  95.63504506210592 %, lr:  0.00013526489683821874
+Epoch:  115
+Epoch:  115 , validation loss:  0.6390717824300131 , validation accuracy:  95.62480014653335 %, lr:  0.00013526489683821874
+Epoch:  116
+Epoch:  116 , validation loss:  0.6390682061513265 , validation accuracy:  95.62821511839087 %, lr:  0.00013526489683821874
+Epoch:  117
+Epoch:  117 , validation loss:  0.6389635801315308 , validation accuracy:  95.61797020281828 %, lr:  0.00013526489683821874
+Epoch:  118
+Epoch:  118 , validation loss:  0.6390260060628256 , validation accuracy:  95.62805989239735 %, lr:  0.00013526489683821874
+Epoch:  119
+Epoch:  119 , validation loss:  0.6389925479888916 , validation accuracy:  95.63240622021601 %, lr:  0.00013526489683821874
+Epoch:  120
+Epoch:  120 , validation loss:  0.6390312115351359 , validation accuracy:  95.61688362086362 %, lr:  0.00013526489683821874
+Epoch:  121
+Epoch:  121 , validation loss:  0.6389516989390055 , validation accuracy:  95.63659732204115 %, lr:  0.00013526489683821874
+Epoch:  122
+Epoch:  122 , validation loss:  0.6389631032943726 , validation accuracy:  95.64668701162022 %, lr:  0.00013526489683821874
+Epoch:  123
+Epoch:  123 , validation loss:  0.638986349105835 , validation accuracy:  95.6446690737044 %, lr:  0.00013526489683821874
+Epoch:  124
+Epoch:  124 , validation loss:  0.638936718304952

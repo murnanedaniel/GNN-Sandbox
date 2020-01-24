@@ -1,0 +1,104 @@
+2020-01-02 16:21:55,979 DEBUG   MainThread:10181 [wandb_config.py:_load_defaults():110] no defaults not found in config-defaults.yaml
+2020-01-02 16:21:55,994 DEBUG   MainThread:10181 [cmd.py:execute():728] Popen(['git', 'cat-file', '--batch-check'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-01-02 16:21:56,005 DEBUG   MainThread:10181 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,014 DEBUG   MainThread:10181 [cmd.py:execute():728] Popen(['git', 'status', '--porcelain', '--untracked-files'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,078 DEBUG   MainThread:10181 [run_manager.py:__init__():535] Initialized sync for edge_classification_sweep/lth5zof5
+2020-01-02 16:21:56,081 INFO    MainThread:10181 [run_manager.py:wrap_existing_process():1133] wrapping existing process 10177
+2020-01-02 16:21:56,081 WARNING MainThread:10181 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2020-01-02 16:21:56,088 DEBUG   MainThread:10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2020-01-02 16:21:56,132 DEBUG   MainThread:10181 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 38782
+2020-01-02 16:21:56,137 INFO    MainThread:10181 [run_manager.py:init_run():918] system metrics and metadata threads started
+2020-01-02 16:21:56,137 INFO    MainThread:10181 [run_manager.py:init_run():952] upserting run before process can begin, waiting at most 10 seconds
+2020-01-02 16:21:56,148 DEBUG   Thread-14 :10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-02 16:21:56,317 DEBUG   Thread-14 :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1052
+2020-01-02 16:21:56,321 INFO    Thread-14 :10181 [run_manager.py:_upsert_run():1037] saving patches
+2020-01-02 16:21:56,322 DEBUG   Thread-14 :10181 [cmd.py:execute():728] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,333 DEBUG   Thread-14 :10181 [cmd.py:execute():728] Popen(['git', 'diff', '--cached', '--abbrev=40', '--full-index', '--raw'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,343 DEBUG   Thread-14 :10181 [cmd.py:execute():728] Popen(['git', 'diff', '--abbrev=40', '--full-index', '--raw'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,355 DEBUG   Thread-14 :10181 [cmd.py:execute():728] Popen(['git', 'version'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,403 DEBUG   Thread-14 :10181 [cmd.py:execute():728] Popen(['git', 'merge-base', 'HEAD', '69d80a3e498659b30768ee9a009ba68a631473a6'], cwd=/global/u2/d/danieltm/ExaTrkX/GNN-Sandbox, universal_newlines=False, shell=None, istream=None)
+2020-01-02 16:21:56,413 INFO    Thread-14 :10181 [run_manager.py:_upsert_run():1041] saving pip packages
+2020-01-02 16:21:56,414 INFO    Thread-14 :10181 [run_manager.py:_upsert_run():1043] initializing streaming files api
+2020-01-02 16:21:56,414 INFO    Thread-14 :10181 [run_manager.py:_upsert_run():1050] unblocking file change observer, beginning sync with W&B servers
+2020-01-02 16:21:56,414 INFO    MainThread:10181 [run_manager.py:wrap_existing_process():1150] informing user process we are ready to proceed
+2020-01-02 16:21:56,415 INFO    MainThread:10181 [run_manager.py:_sync_etc():1257] entering loop for messages from user process
+2020-01-02 16:21:56,992 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/config.yaml
+2020-01-02 16:21:57,005 DEBUG   Thread-3  :10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-02 16:21:57,172 DEBUG   Thread-3  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1100
+2020-01-02 16:21:57,175 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/output.log
+2020-01-02 16:21:57,175 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/requirements.txt
+2020-01-02 16:21:57,175 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:21:57,175 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/diff.patch
+2020-01-02 16:21:57,990 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/output.log
+2020-01-02 16:21:59,057 DEBUG   Thread-15 :10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-02 16:21:59,186 DEBUG   Thread-7  :10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-01-02 16:21:59,203 DEBUG   Thread-15 :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 827
+2020-01-02 16:21:59,211 DEBUG   Thread-15 :10181 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-01-02 16:21:59,358 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:21:59,574 DEBUG   Thread-15 :10181 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/murnanedaniel/edge_classification_sweep/lth5zof5/___batch_archive_1.tgz?Expires=1578010979&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=KbplbQb2XCs5qx1xdDF2codck9LtdCJv0mEL8%2F6MOXKh%2Bw1C2YtETDD534lFUrrXHS7wY3FVTtFB%2B2s19sdzZIdxS8c2p3%2F8hGHlme665p4CCnhbmh3bvqsZj0dYh4d5WUrJS4Rmx8DZnU2A0yUTOABmIaBMcKkOXZBQ7E6GZ2fn47tXyzg2xaltNOCEH074PoqLeHnL1ltek7tUYZvyK%2F9QDBlVlzEOm%2F579mCkkZa%2BIIUHgqXY%2B47SFgwtF2qKII%2FkeNMO9Wu0VVurADFlYm8W0TsGrj0AV8OFWg8JPFWonwsgAZl%2BFsqUQJKk%2F82sIG2%2FKThlU7j8vX8sa4YHZg%3D%3D HTTP/1.1" 200 0
+2020-01-02 16:22:04,845 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:22:05,001 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/output.log
+2020-01-02 16:22:07,003 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/output.log
+2020-01-02 16:22:08,003 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:22:08,122 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:22:13,006 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:22:25,012 INFO    Thread-3  :10181 [run_manager.py:_on_file_created():671] file/dir created: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:22:25,137 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:22:29,015 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:22:36,019 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:22:36,020 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:22:36,235 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:22:38,441 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:22:45,024 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:22:55,029 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:22:55,197 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:23:01,033 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:23:03,034 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:23:04,035 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:23:14,271 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:23:17,048 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:23:25,052 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:23:25,242 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:23:31,056 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:23:31,057 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:23:33,057 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:23:41,358 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:23:49,066 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:23:55,069 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:23:55,256 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:23:58,071 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:23:58,072 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:24:05,075 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:24:08,377 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:24:21,084 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:24:25,086 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:24:25,087 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:24:25,087 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:24:25,283 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:24:35,539 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:24:37,093 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:24:52,101 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:24:52,102 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:24:52,288 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:24:53,102 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:24:55,103 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:25:05,418 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:25:09,111 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:25:19,116 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:25:19,117 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:25:19,323 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:25:25,120 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:25:25,120 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:25:35,426 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:25:41,128 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:25:46,131 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:25:46,132 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:25:46,332 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:25:55,136 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-events.jsonl
+2020-01-02 16:25:57,137 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:26:05,469 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+2020-01-02 16:26:13,146 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-metadata.json
+2020-01-02 16:26:14,147 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-summary.json
+2020-01-02 16:26:14,147 INFO    Thread-3  :10181 [run_manager.py:_on_file_modified():682] file/dir modified: /global/u2/d/danieltm/ExaTrkX/GNN-Sandbox/wandb/run-20200103_002155-lth5zof5/wandb-history.jsonl
+2020-01-02 16:26:24,381 DEBUG   Thread-7  :10181 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/murnanedaniel/edge_classification_sweep/lth5zof5/file_stream HTTP/1.1" 200 311
+h5zof5/wandb-history.jsonl

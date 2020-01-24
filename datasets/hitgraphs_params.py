@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, random_split
-import torch_geometric
+import torch_geometric.data
 
 def load_graph(filename):
     with np.load(filename) as f:

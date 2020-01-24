@@ -1,0 +1,15 @@
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/global/homes/d/danieltm/.local/cori/pytorchv1.2.0-gpu/lib/python3.6/site-packages/wandb/wandb_agent.py", line 63, in _start
+    function()
+  File "edge_sweep.py", line 158, in train
+    model = NHop_Edge_Class_Net(**m_configs).to(device)
+  File "edge_sweep.py", line 120, in __init__
+    self.edge_network = EdgeNetwork(input_dim+hidden_dim, hidden_dim,
+NameError: name 'EdgeNetwork' is not defined
+Loading data...
+Using  cuda

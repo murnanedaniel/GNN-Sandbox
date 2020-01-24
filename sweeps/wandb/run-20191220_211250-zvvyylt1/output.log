@@ -1,0 +1,26 @@
+Loading data...
+Using  cuda
+THCudaCheck FAIL file=/global/cscratch1/sd/swowner/pytorch-build/pytorch/v1.2.0-gpu/pytorch/aten/src/THC/THCGeneral.cpp line=54 error=3 : initialization error
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/global/homes/d/danieltm/.local/cori/pytorchv1.2.0-gpu/lib/python3.6/site-packages/wandb/wandb_agent.py", line 63, in _start
+    function()
+  File "sweep.py", line 136, in train
+    model = Edge_Track_Truth_Net(**m_configs).to(device)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 432, in to
+    return self._apply(convert)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 230, in _apply
+    param_applied = fn(param)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/nn/modules/module.py", line 430, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+  File "/usr/common/software/pytorch/v1.2.0-gpu/lib/python3.6/site-packages/torch/cuda/__init__.py", line 179, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: cuda runtime error (3) : initialization error at /global/cscratch1/sd/swowner/pytorch-build/pytorch/v1.2.0-gpu/pytorch/aten/src/THC/THCGeneral.cpp:54
