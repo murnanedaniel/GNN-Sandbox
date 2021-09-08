@@ -64,7 +64,7 @@ parso==0.5.0
 pathtools==0.1.2
 pexpect==4.7.0
 pickleshare==0.7.5
-pillow==6.1.0
+pillow==8.3.2
 pip==19.1.1
 plyfile==0.7
 pprofile==2.0.2
