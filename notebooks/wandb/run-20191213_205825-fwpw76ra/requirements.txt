@@ -173,7 +173,7 @@ wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.56.0
 werkzeug==0.16.0
-wheel==0.33.4
+wheel==0.38.1
 widgetsnbextension==3.5.1
 wurlitzer==2.0.0
 yapf==0.28.0
